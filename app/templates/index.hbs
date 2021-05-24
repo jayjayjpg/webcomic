@@ -1,9 +1,16 @@
 {{page-title "Index"}}
 
-{{#each @model as |panel|}}
-  <h1>{{panel.id}}</h1>
-  <img src={{panel.url}} class="full" />
-{{/each}}
+<main class="grid grid-cols-4 gap-1 grid-flow-col-dense">
+
+  {{#each @model as |panel|}}
+    <div class="{{panel.layoutRowClass}} {{panel.layoutColumnClass}} {{panel.otherClasses}} bg-indigo-300">
+      <h1>{{panel.id}}</h1>
+      <img src={{panel.url}} class="full" />
+    </div>
+  {{/each}}
+
+</main>
+
 
 <InfinityLoader @infinityModel={{model}} />
 
