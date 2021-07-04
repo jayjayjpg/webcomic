@@ -1,14 +1,13 @@
 {{page-title "Index"}}
 
-<main class="grid grid-cols-4 gap-1 grid-flow-col-dense">
-
-  {{#each @model as |panel|}}
-    <div class="{{panel.layoutRowClass}} {{panel.layoutColumnClass}} {{panel.otherClasses}} bg-indigo-300">
-      <h1>{{panel.id}}</h1>
-      <img src={{panel.url}} class="full" />
-    </div>
-  {{/each}}
-
+<main class="flex justify-center">
+  <div class="panel-container w-full max-w-4xl">
+    <section class="grid">
+      {{#each @model as |panel|}}
+        <Panel @panel={{panel}} />
+      {{/each}}
+    </section>
+  </div>
 </main>
 
 
