@@ -8,10 +8,7 @@ import { setupGlobalA11yHooks } from 'ember-a11y-testing/test-support';
 
 setApplication(Application.create(config.APP));
 
-setupGlobalA11yHooks(
-  () => true,
-  (_contextSelector, axeOptions) => a11yAudit('#ember-testing-container > *', axeOptions),
-)
+setupGlobalA11yHooks(() => true);
 
 setup(QUnit.assert);
 

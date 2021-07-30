@@ -1,4 +1,5 @@
 // blueprints/acceptance-test/index.js
+/* eslint-disable ember/no-string-prototype-extensions */
 'use strict';
 
 const fs = require('fs');

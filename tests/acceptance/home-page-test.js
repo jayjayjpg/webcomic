@@ -4,15 +4,15 @@ import { setupApplicationTest } from 'ember-qunit';
 import { setupMirage } from 'ember-cli-mirage/test-support';
 import { a11yAudit } from 'ember-a11y-testing/test-support';
 
-module('Acceptance | home page', function(hooks) {
+module('Acceptance | home page', function (hooks) {
   setupApplicationTest(hooks);
   setupMirage(hooks);
 
-  hooks.beforeEach(function() {
+  hooks.beforeEach(function () {
     this.server.createList('panel', 3);
   });
 
-  test('visiting home page', async function(assert) {
+  test('visiting home page', async function (assert) {
     await visit('/');
 
     assert.equal(currentURL(), '/');
@@ -21,7 +21,7 @@ module('Acceptance | home page', function(hooks) {
     assert.dom('[data-test-panel-layer]').exists({ count: 3 });
   });
 
-  test('page is accessible', async function(assert) {
+  test('page is accessible', async function (assert) {
     await visit('/');
 
     await a11yAudit();
