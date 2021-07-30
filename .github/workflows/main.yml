@@ -1,0 +1,31 @@
+name: Build and Tests
+
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the main branch
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test-app:
+    name: testz
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checking
+        uses: actions/checkout@v2
+
+      - name: Use Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14'
+
+      - name: installz
+        run: npm install
+
+      - name: testing
+        run: npm run test:ember

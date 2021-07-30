@@ -1,4 +1,6 @@
-<div class="{{@panel.layoutRowClass}} {{@panel.layoutColumnClass}} {{@panel.otherClasses}} bg-indigo-300" data-test-panel={{@panel.id}}>
-  <h1>{{@panel.id}}</h1>
-  <img src={{@panel.url}} class="w-full" data-test-panel-base-image />
-</div>
+<article class="{{@panel.layoutRowClass}} {{@panel.layoutColumnClass}} {{@panel.otherClasses}} bg-indigo-300 border-4 border-black mb-2 relative" data-test-panel={{@panel.id}} ...attributes>
+  <h1 class="absolute">{{@panel.id}}</h1>
+  {{#each @panel.illustrations as |image|}}
+    <Panel::Layer @image={{image}} />
+  {{/each}}
+</article>

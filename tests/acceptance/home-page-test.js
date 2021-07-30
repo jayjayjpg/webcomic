@@ -15,7 +15,8 @@ module('Acceptance | home page', function(hooks) {
     await visit('/');
 
     assert.equal(currentURL(), '/');
+    assert.dom('[data-test-home-page-title]').includesText('Diamanias');
     assert.dom('[data-test-panel]').exists({ count: 3 });
-    assert.dom('[data-test-panel-base-image]').exists({ count: 3 });
+    assert.dom('[data-test-panel-layer]').exists({ count: 3 });
   });
 });

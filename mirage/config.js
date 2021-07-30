@@ -45,4 +45,8 @@ export default function() {
 
     return json;
   });
+
+  this.get('/panels/:id');
+  this.get('/illustrations');
+  this.get('/illustrations/:id');
 }

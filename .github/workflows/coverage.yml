@@ -1,0 +1,26 @@
+name: ember-cli-code-coverage
+
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the main branch
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: testing coverage
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: installz
+      run: npm install
+    - uses: mydea/ember-cli-code-coverage-action@v1
+      with:
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"

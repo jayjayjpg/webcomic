@@ -5,6 +5,6 @@ export default class IndexRoute extends Route {
   @service infinity
 
   model() {
-    return this.infinity.model('panel');
+    return this.infinity.model('panel', { include: 'illustrations' });
   }
 }

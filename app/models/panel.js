@@ -1,8 +1,9 @@
-import Model, { attr } from '@ember-data/model';
+import Model, { attr, hasMany } from '@ember-data/model';
 
 export default class PanelModel extends Model {
-  @attr url;
   @attr layoutRowClass;
   @attr layoutColumnClass;
   @attr otherClasses;
+
+  @hasMany('illustration', { async: false }) illustrations;
 }

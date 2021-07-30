@@ -2,6 +2,7 @@
 
 <main class="flex justify-center">
   <div class="panel-container w-full max-w-4xl">
+    <h1 data-test-home-page-title>Diamanias</h1>
     <section class="grid">
       {{#each @model as |panel|}}
         <Panel @panel={{panel}} />
@@ -10,7 +11,6 @@
   </div>
 </main>
 
-
-<InfinityLoader @infinityModel={{model}} />
+<InfinityLoader @infinityModel={{@model}} />
 
 {{outlet}}
