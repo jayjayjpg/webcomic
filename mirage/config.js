@@ -1,5 +1,4 @@
-export default function() {
-
+export default function () {
   // These comments are here to help you get started. Feel free to delete them.
 
   /*
@@ -23,7 +22,7 @@ export default function() {
 
     https://www.ember-cli-mirage.com/docs/route-handlers/shorthands
   */
-  this.get('/panels', function(schema, request) {
+  this.get('/panels', function (schema, request) {
     let pagination = request.queryParams;
     let allPanels = schema.panels.all();
     let panels = allPanels;

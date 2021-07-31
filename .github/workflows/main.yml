@@ -27,5 +27,5 @@ jobs:
       - name: installz
         run: npm install
 
-      - name: testing
-        run: npm run test:ember
+      - name: linting and testing
+        run: npm run test

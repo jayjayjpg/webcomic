@@ -21,7 +21,7 @@ export default Factory.extend({
     return '';
   },
 
-  layoutRowClass(i) {
+  layoutRowClass() {
     return '';
   },
 
@@ -31,11 +31,11 @@ export default Factory.extend({
 
   afterCreate(panel, server) {
     if (panel.id > 48) {
-    //  debugger;
+      //  debugger;
     }
 
     panel.update({
-      illustrations: server.createList('illustration', 1)
+      illustrations: server.createList('illustration', 1),
     });
-  }
+  },
 });
