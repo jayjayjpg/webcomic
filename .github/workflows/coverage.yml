@@ -1,11 +1,8 @@
 name: ember-cli-code-coverage
 
 on:
-  # Trigger the workflow on push or pull request,
+  # Trigger the workflow on pull request,
   # but only for the main branch
-  push:
-    branches:
-      - main
   pull_request:
     branches:
       - main
